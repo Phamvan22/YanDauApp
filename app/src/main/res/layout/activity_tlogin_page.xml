@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFD0D0"
+    tools:context=".T_LoginPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/LoginText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/loginLogo2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:ignore="MissingConstraints"
+                android:layout_marginTop="70dp"
+                tools:srcCompat="@drawable/logo_login" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="YANDAU XIN CHÀO!"
+                android:textSize="15pt"
+                android:textStyle=""
+                tools:ignore="MissingConstraints"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="10pt"
+                android:text="Triệu món ăn nóng hổi trên YanDauFood đã sẵn sàng, chỉ chờ bạn đặt." />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/facebookLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/fb_icon"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/round_button"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:gravity="left|center"
+                android:drawablePadding="30dp"
+                android:paddingLeft="15dp"
+                android:textSize="8pt"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:text="Tiếp tục với Facebook" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/googleLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:gravity="left|center"
+                android:drawablePadding="30dp"
+                android:background="@drawable/round_button"
+                android:drawableLeft="@drawable/gg_icon"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="15dp"
+                android:text="Tiếp tục với google"
+                android:textColor="@color/black"
+                android:textSize="8pt" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/appleLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:gravity="left|center"
+                android:drawablePadding="30dp"
+                android:background="@drawable/round_button"
+                android:drawableLeft="@drawable/apple_icon"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="15dp"
+                android:text="Tiếp tục với apple"
+                android:textColor="@color/black"
+                android:textSize="8pt" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="HOẶC" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/phoneLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/round_button"
+                android:drawableLeft="@drawable/phone_icon"
+                android:drawablePadding="30dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left|center"
+                android:paddingLeft="15dp"
+                android:text="Tiếp tục với số điện thoại"
+                android:textColor="@color/black"
+                android:textSize="8pt" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
