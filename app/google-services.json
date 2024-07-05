@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "550258684522",
+    "project_id": "yandau-2d179",
+    "storage_bucket": "yandau-2d179.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550258684522:android:f20f1c497033321966d013",
+        "android_client_info": {
+          "package_name": "com.example.doan3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRCZuTCIxH-eaICP73cxQndhvmZSTDtqI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
