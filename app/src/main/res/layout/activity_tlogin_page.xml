@@ -23,8 +23,8 @@
                 android:id="@+id/loginLogo2"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                tools:ignore="MissingConstraints"
                 android:layout_marginTop="70dp"
+                tools:ignore="MissingConstraints"
                 tools:srcCompat="@drawable/logo_login" />
 
             <TextView
@@ -46,7 +46,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textSize="10pt"
+                android:textSize="8pt"
                 android:text="Triệu món ăn nóng hổi trên YanDauFood đã sẵn sàng, chỉ chờ bạn đặt." />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/fb_icon"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/round_button"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
@@ -109,7 +109,7 @@
                 android:text="HOẶC" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/phoneLogin"
+                android:id="@+id/btnPhoneLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
