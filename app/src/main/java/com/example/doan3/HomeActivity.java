@@ -1,6 +1,7 @@
 package com.example.doan3;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
@@ -32,7 +33,7 @@ public class HomeActivity extends BaseActivity {
         EdgeToEdge.enable(this);
         setContentView(binding.getRoot());
 
-        initBestRestaurant();
+//        initBestRestaurant();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -41,31 +42,38 @@ public class HomeActivity extends BaseActivity {
         });
     }
 
-    private void initBestRestaurant() {
-        DatabaseReference myRef = database.getReference("Restaurant");
-        binding.progressBarBestRestaurant.setVisibility(View.VISIBLE);
-        ArrayList<Restaurant> list= new ArrayList<>();
-        Query query = myRef.orderByChild("Best Restaurant").equalTo(true);
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    for(DataSnapshot issue :snapshot.getChildren()){
-                        list.add(issue.getValue(Restaurant.class));
-                    }
-                    if(list.size()> 0){
-                        binding.recycleBestRestaurant.setLayoutManager(new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false));
-                        RecyclerView.Adapter adapter = new BestRestaurantAdapter(list);
-                        binding.recycleBestRestaurant.setAdapter(adapter);
-                    }
-                    binding.progressBarBestRestaurant.setVisibility(View.GONE);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
+//    private void initBestRestaurant() {
+//        DatabaseReference myRef = database.getReference("Restaurant");
+//        binding.progressBarBestRestaurant.setVisibility(View.VISIBLE);
+//        ArrayList<Restaurant> list= new ArrayList<>();
+//        Query query = myRef.orderByChild("BestRestaurant").equalTo(true);
+//        query.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                if (snapshot.exists()) {
+//                    for (DataSnapshot issue : snapshot.getChildren()) {
+//                        Restaurant restaurant = issue.getValue(Restaurant.class);
+//                        if (restaurant != null) {
+//                            list.add(restaurant);
+//                            Log.d("RestaurantData", "Name: " + restaurant.getName() + ", Description: " + restaurant.getDescription());
+//                        }
+//                    }
+//                    if (list.size() > 0) {
+//                        binding.recycleBestRestaurant.setLayoutManager(new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false));
+//                        RecyclerView.Adapter adapter = new BestRestaurantAdapter(list);
+//                        binding.recycleBestRestaurant.setAdapter(adapter);
+//                    }
+//                    binding.progressBarBestRestaurant.setVisibility(View.GONE);
+//                } else {
+//                    Log.d("RestaurantData", "No matching data found.");
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                Log.e("RestaurantData", "Error: " + error.getMessage());
+//            }
+//        });
+//
+//    }
 }

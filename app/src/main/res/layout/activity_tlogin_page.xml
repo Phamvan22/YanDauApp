@@ -19,14 +19,6 @@
             android:orientation="vertical"
             tools:ignore="MissingConstraints">
 
-            <ImageView
-                android:id="@+id/loginLogo2"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="70dp"
-                tools:ignore="MissingConstraints"
-                tools:srcCompat="@drawable/logo_login" />
-
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
@@ -36,7 +28,7 @@
                 android:textSize="15pt"
                 android:textStyle=""
                 tools:ignore="MissingConstraints"
-                android:layout_marginTop="30dp" />
+                android:layout_marginTop="200dp" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -124,6 +116,23 @@
                 android:text="Tiếp tục với số điện thoại"
                 android:textColor="@color/black"
                 android:textSize="8pt" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dangKy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/round_button"
+                android:drawablePadding="30dp"
+                android:fontFamily="sans-serif-light"
+                android:paddingLeft="15dp"
+                android:text="Đăng ký"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="8pt" />
+
+
 
         </LinearLayout>
 

@@ -53,6 +53,10 @@ dependencies {
     implementation("com.google.firebase:firebase-core:21.1.1")
     implementation("com.google.code.gson:gson:2.9.1")
     implementation("com.github.bumptech.glide:glide:4.12.0")
+    implementation ("com.google.firebase:firebase-database:20.0.5")
+    implementation ("com.firebaseui:firebase-ui-database:8.0.0")
+    implementation ("com.squareup.picasso:picasso:2.71828")
+
 
 
 

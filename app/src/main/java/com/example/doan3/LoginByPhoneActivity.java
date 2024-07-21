@@ -1,6 +1,7 @@
 package com.example.doan3;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +46,17 @@ public class LoginByPhoneActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String phone = edtPhoneNumber.getText().toString().trim();
+                String password = edtPassword.getText().toString().trim();
+
+                if (phone.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(LoginByPhoneActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (phone.length() < 10 || phone.length() > 11) {
+                    Toast.makeText(LoginByPhoneActivity.this, "Phone number must be between 10 and 11 digits", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 final ProgressDialog mDialog = new ProgressDialog(LoginByPhoneActivity.this);
                 mDialog.setMessage("Please waiting ... ");
                 table_user.addValueEventListener(new ValueEventListener() {
@@ -56,7 +68,8 @@ public class LoginByPhoneActivity extends AppCompatActivity {
                             mDialog.dismiss();
                             User user = snapshot.child(edtPhoneNumber.getText().toString()).getValue(User.class);
                             if(user.getPassword().equals(edtPassword.getText().toString())){
-                                Toast.makeText(LoginByPhoneActivity.this, "Sign in successfully !", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(LoginByPhoneActivity.this, HomePageActivity.class);
+                                startActivity(intent);
                             }
                             else{
                                 Toast.makeText(LoginByPhoneActivity.this, "Sign in failed !", Toast.LENGTH_SHORT).show();
